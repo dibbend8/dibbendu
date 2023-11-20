@@ -164,12 +164,16 @@ section .title::after{
 
 /* home section styling */
 .home{
-    display: flex;
-    background: url("images/dibbendu_gramp.jpeg") no-repeat center;
-    height: 100vh;
+    width: 200px; /* Set the width of the cropped image */
+    height: 200px; /* Set the height of the cropped image */
+    background-image: url("images/dibbendu_brisbane.jpeg");
+    /* height: 100vh; */
+    /* background-image: url('your_image.jpg'); Path to your image */
+    background-size: cover; /* This property ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
     color: black;
     min-height: 500px;
-    background-size: cover;
+    /* background-size: cover; */
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -219,12 +223,15 @@ section .title::after{
 }
 .about .about-content .left{
     width: 45%;
+    top: 150px;
 }
 .about .about-content .left img{
-    height: 300px;
-    width: 300px;
+    display: flex;
+    height: 400px;
+    width: 400px;
     object-fit: cover;
     border-radius: 20px;
+    
 }
 .about .about-content .right{
     width: 55%;
@@ -238,6 +245,9 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
+.about .about-content .right ul.a {
+    list-style-type: square;
+  }  
 .about .about-content .right .text span{
     color: crimson;
 }
