@@ -170,9 +170,10 @@ section .title::after{
     /* height: 100vh; */
     /* background-image: url('your_image.jpg'); Path to your image */
     background-size: cover; /* This property ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
+    /* background-position: center; Centers the image */
+    background-position:center;
     color: black;
-    min-height: 500px;
+    min-height: 100px;
     /* background-size: cover; */
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
@@ -224,6 +225,8 @@ section .title::after{
 .about .about-content .left{
     width: 45%;
     top: 150px;
+    position:relative;
+    top:-150px;
 }
 .about .about-content .left img{
     display: flex;
@@ -231,6 +234,7 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 20px;
+    
     
 }
 .about .about-content .right{
