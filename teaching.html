@@ -1,59 +1,128 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DIBBENDU ROY</title>
-        <link rel="stylesheet" href="styleTeach.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    
-    </head>
-    
-    <div class="back">
-    <body>
-        <div class="scroll-up-btn">
-            <i class="fas fa-angle-up"></i>
-        </div>
-        <nav class="navbar">
-            <div class="max-width">
-                <div class="logo"><a href="index.html"><span>Welcome</span></a></div>
-                <ul class="menu">
-                    <!-- <li><a href="#home" class="menu-btn">Home</a></li> -->
-                    <li><a href="index.html#about" class="menu-btn">About</a></li>
-                    <li><a href="index.html#services" class="menu-btn">Publications</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="DibbenduResume.pdf" target="_blank">CV</a></li>
-                    <!-- <li><a href="#skills" class="menu-btn">Skills</a></li>
-                    <li><a href="#teams" class="menu-btn">Teams</a></li> -->
-                    <li><a href="index.html#contact" class="menu-btn">Contact</a></li>
-                </ul>
-                <div class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    
-    <section class="about" id="about">
-        <div class="max-width">
-            <!-- <img src="images/dibbendu_grampzoom.jpeg" alt=""> -->
-            <h2 class="title">Courses</h2>
-            <div class="textcourse" id="blink_effect">**Spring 23** EE 650N/EE 450N - <strong>IoT Communication Networks</strong>  <span class="typing-2"></span> <br>
-                &emsp;Course Details will be updated shortly.</div>
-                <!-- <script>
-                    blinking_text = document.getElementById('blink_effect');
-                    setInterval(function() {
-                        blinking_text.style.display = (blinking_text.style.display == 'none' ? '' : 'none');
-                    }, 500);
-                </script> -->
-        </body>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teaching</title>
+  <style>
+    /* Basic styling for the menu */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Background color for the entire page */
+      text-align: justify; /* Set text alignment to justify for the entire body */
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-left {
+      flex: 1;
+      text-align: left;
+      padding-left: 40px;
+    }
+    .menu-right {
+      flex: 1;
+      text-align: right;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 10px;
+      transition: color 0.3s ease-in-out;
+    }
+    nav ul li a:hover {
+      color: #ffd700; /* Change the color on hover */
+    }
+    nav ul li a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://via.placeholder.com/150'); /* Placeholder background image URL */
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    nav ul li a:hover::before {
+      opacity: 0.3; /* Show background image on hover */
+    }
+    /* Style for content section */
+    .content {
+      padding: 20px;
+    }
+    .content h2 {
+      text-align: center;
+    }
+    .courses {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    .courses li {
+      margin-bottom: 10px;
+    }
+     /* Blinking animation */
+     @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .blink {
+      animation: blink 2s infinite; /* Apply the blinking animation */
+      color:red;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="menu-left">
+    <h1>Teaching</h1>
+  </div>
+  <div class="menu-right">
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html#services">Publications</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="DibbenduResume.pdf" target="_blank">CV</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="content">
+  <h2>Courses</h2>
+  <ul class="courses">
+    <!-- List the courses you are going to teach -->
+    <li class="blink">**Spring 23** EE 650N/EE 450N - IoT Communication Networks
+         Course Details will be updated shortly.</li>
+    <!-- Add more courses as needed -->
+  </ul>
+</main>
+
+</body>
 </html>
