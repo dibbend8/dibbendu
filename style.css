@@ -63,7 +63,7 @@ section .title::before{
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: white;
     transform: translateX(-50%);
 }
 section .title::after{
@@ -88,7 +88,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: white;
 }
 .navbar .max-width{
     display: flex;
@@ -127,6 +127,9 @@ section .title::after{
 }
 
 /* menu btn styling */
+
+
+
 .menu-btn{
     color: red;
     font-size: 23px;
@@ -160,8 +163,6 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
-
-
 /* home section styling */
 .home{
     width: 200px; /* Set the width of the cropped image */
@@ -230,6 +231,7 @@ section .title::after{
     width: 45%;
     top: 10px;
     position:relative;
+    align-items: center;
     top: -10px;
 }
 .about .about-content .right{
@@ -244,6 +246,11 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 20px;    
+}
+.about .about-content .left .icons{
+    text-align: center;
+    position: relative;
+    left: -50px;
 }
 .about .about-content .left .text{
     font-size: 25px;
@@ -260,7 +267,7 @@ section .title::after{
   
 
 .about .about-content .right{
-    width: 55%;
+    width: 50%;
 }
 .about .about-content .a:hover {
     color: crimson;
@@ -606,16 +613,18 @@ footer span a:hover{
 
 
 /* responsive media query start */
-@media (max-width: 1104px) {
+ @media (max-width: 947px) {
     .about .about-content .left img{
         height: 350px;
         width: 350px;
+        margin-top: -50px;
+        padding-bottom: 10px;
     }
 }
 
 @media (max-width: 991px) {
     .max-width{
-        padding: 0 50px;
+        padding: 0 px;
     }
 }
 @media (max-width: 947px){
@@ -628,11 +637,11 @@ footer span a:hover{
     }
     .navbar .menu{
         position: fixed;
-        height: 100vh;
+        height: 200vh;
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: white;
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -668,15 +677,21 @@ footer span a:hover{
         max-width: 930px;
     }
     .about .about-content .column{
-        width: 100%;
+        width: 50%;
     }
     .about .about-content .left{
         display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
+        flex-direction: column; /* Display items side by side */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        text-align: left; /* Center text within the container */
+    }
+    .about .about-content .left .text{
+        padding: 10px;
     }
     .about .about-content .right{
         flex: 100%;
+        padding-top: 100px;
     }
     .services .serv-content .card{
         width: calc(50% - 10px);
@@ -737,7 +752,7 @@ footer span a:hover{
         line-height: 38px;
     }
 }
-.back{
+/* .back{
     background: url(images/—Pngtree—school\ classroom\ blackboard\ desk\ education_1589851.png);
     background-size: cover;
     overflow: hidden;
@@ -751,4 +766,121 @@ footer span a:hover{
         color: blue;
         font-size: 20 px;
         transition: 0.1s;
-    }     
+    }      */
+
+
+    /* Existing CSS... */
+
+/* responsive media queries start */
+/* @media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .navbar .menu {
+        padding-top: 80px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+    }
+
+    .services .serv-content .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form .error-box {
+        width: 150px;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+} */  */
+
+/* Existing CSS... */
