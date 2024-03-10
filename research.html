@@ -4,73 +4,129 @@
   <meta charset="UTF-8">
   <title>Research</title>
   <style>
-    /* Basic styling for the menu */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4; /* Background color for the entire page */
-      text-align: justify;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .menu-left {
-      flex: 1;
-      padding-left: 40px;
-      text-align: left;
-    }
-    .menu-right {
-      flex: 1;
-      text-align: right;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-    }
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      padding: 5px 10px;
-      transition: color 0.3s ease-in-out;
-    }
-    nav ul li a:hover {
-      color: #ffd700; /* Change the color on hover */
-    }
-    nav ul li a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://via.placeholder.com/150'); /* Placeholder background image URL */
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-    nav ul li a:hover::before {
-      opacity: 0.3; /* Show background image on hover */
-    }
-    /* Style for content section */
-    .content {
-      padding: 20px;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: justify;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-left, .menu-right {
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://via.placeholder.com/150');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  opacity: 0.3;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  text-align: left;
+}
+
+.courses {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.courses li {
+  margin-bottom: 10px;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink {
+  animation: blink 2s infinite;
+  color: red;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-left, .menu-right {
+    padding: 10px;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+}
+
   </style>
 </head>
 <body>
