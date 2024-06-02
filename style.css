@@ -232,7 +232,7 @@ section .title::after{
     top: 10px;
     position:relative;
     align-items: center;
-    top: -65px;
+    top: -20px;
 }
 .about .about-content .right{
     width: 55%;
